@@ -64,6 +64,7 @@ form button:hover {
     padding-left: 1rem;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.3s ease;
 }
 
 .todo li {
@@ -82,4 +83,20 @@ form button:hover {
 
 .complete-btn {
     background: rgb(104, 197, 104);
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.deleted {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+    transition: all 0.5s ease;
 }
