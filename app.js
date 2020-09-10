@@ -138,11 +138,16 @@ function deleteFromLocalStorage(todo) {
     } else {
         todos = JSON.parse(localStorage.getItem("todos"));
     }
-    let todos2 = [];
-    for (i = 0; i < todos.length; i++) {
-        if (todos[i] != todo) {
-            todos2.push(todos[i]);
-        }
-    }
-    localStorage.setItem("todos", JSON.stringify(todos2));
+    // let todos2 = [];
+    // for (i = 0; i < todos.length; i++) {
+    //     if (todos[i] != todo) {
+    //         todos2.push(todos[i]);
+    //     }
+    // }
+    // localStorage.setItem("todos", JSON.stringify(todos2));
+
+    //or simply you can do is...
+
+    todos.splice(todos.indexOf(todo), 1);
+    localStorage.setItem("todos", JSON.stringify(todos));
 }
